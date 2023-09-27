@@ -1,0 +1,46 @@
+<section class="
+    c-dim m-pt-11 m-pb-11
+    c-skin m-bc-grey-light-200"
+    m-pl-5="xs,sm"
+    m-pr-5="xs,sm"
+    m-pt-9="xs,sm"
+    m-pb-9="xs,sm">
+    <article class="
+        c-dis m-flex m-column m-gap-8
+        c-dim m-maxw-5 m-w-100 m-m-auto">
+        <h2 class="
+            c-dim m-m-0
+            c-txt m-ff-lead-600 m-fs-9">
+            {{ cms_model[cms_page.language].title }}
+        </h2>
+        <ul class="
+            c-dis m-flex m-cross-start m-gap-6 m-wrap
+            c-dim m-m-0 m-p-0
+            c-skin m-ls-none">
+            {% for item in cms_model[cms_page.language].cards %}
+                <li class="
+                    c-dim m-p-6
+                    c-skin m-bc-grey-light-100 m-brad-6"
+                    m-w-{{ item.width_twelves }}t="md,lg"
+                    m-w-100="xs,sm">
+                    <div class="c-dis m-flex m-column m-gap-3">
+                        <span class="icon-{{ item.icon }}
+                            c-txt m-fs-10
+                            c-skin m-c-{{ item.icon_color }}"></span>
+                        <h3 class="
+                            c-dim m-mb-0 m-mt-6
+                            c-txt m-ff-lead-600 m-fs-6">
+                            {{ item.title }}
+                        </h3>
+                        <p class="
+                            c-dim m-m-0
+                            c-txt m-ff-lead-400 m-fs-4 m-lh-5
+                            c-skin m-c-grey-dark-300">
+                            {{ item.description }}
+                        </p>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </article>
+</section>

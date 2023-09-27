@@ -1,0 +1,56 @@
+<nav class="
+    c-dis m-flex
+    c-pos m-sticky m-top-0 m-z-2
+    c-skin m-bc-grey-light-100 m-bbstyle-solid m-bwidth-1 m-bbcolor-grey-light-500"
+    c-scrollsyncbar>
+    <menu class="
+        c-dis m-flex m-main-space-between m-cross-center
+        c-dim m-w-100 m-maxw-3 m-m-auto m-pt-5 m-pr-10 m-pb-5 m-pl-10
+        c-skin m-ls-none"
+        m-pt-0="xs,sm,md"
+        m-pr-0="xs,sm"
+        m-pr-4="md"
+        m-pb-0="xs,sm,md"
+        m-pl-0="xs,sm"
+        m-pl-4="md">
+        <li>
+            <a href="{{ envlocal.url | default: env.url }}{{ envlocal.baseurl | default: env.baseurl }}/{{ cms_page.language }}/{{ cms_site.homepage_slug[cms_page.language] }}"
+                class="
+                c-dis m-inline-flex
+                c-dim
+                c-txt m-td-none"
+                m-pt-4="xs,sm,md"
+                m-pr-5="xs,sm,md"
+                m-pb-4="xs,sm,md"
+                m-pl-5="xs,sm,md">
+                <img src="{{ cms_model[cms_page.language].logo_url }}" 
+                    alt="{{ cms_model[cms_page.language].logo_alt }}"
+                    height="24"
+                    width="85">
+            </a>
+            
+            {% for reference in cms_links %}
+                {% if cms_site.homepage_slug[cms_page.language] != cms_links[reference[0]][cms_page.language] %}
+                    <a  href="{{ envlocal.url | default: env.url }}{{ envlocal.baseurl | default: env.baseurl }}/{{ cms_page.language }}/{{ cms_links[reference[0]][cms_page.language] }}"
+                        hreflang="{{ cms_page.language }}"
+                        class="
+                        c-dis m-inline-flex m-cross-center m-gap-2 
+                        c-dim m-p-3 m-pl-6 m-pr-6
+                        c-txt m-ff-lead-400 m-fs-3 m-td-none
+                        c-skin m-c-grey-dark-900 m-bbstyle-solid m-bbwidth-1 m-bbcolor-grey-light-500" m-w-100="xs,sm,md" m-p-4="xs,sm,md" m-pl-0="xs,sm,md" m-pr-0="xs,sm,md" m-fs-5="xs,sm,md" m-ff-lead-500="xs,sm,md" m-bb-0="lg">
+                        {{ cms_links[reference[0]][cms_page.language] }}
+                    </a>
+                {% endif %}
+            {% endfor %}
+        </li>
+        <li>
+            {% for language in cms_site.languages %}
+                {% if language == cms_page.language %}
+                    {{ language }}
+                {% else %}
+                    <a href="{{ envlocal.url | default: env.url }}{{ envlocal.baseurl | default: env.baseurl }}/{{ language }}/{{ cms_links[cms_page.reference][language] }}" hreflang="{{ language }}">{{ language }}</a>
+                {% endif %}
+            {% endfor %}
+        </li>
+    </menu>
+</nav>

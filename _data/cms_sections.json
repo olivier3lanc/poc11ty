@@ -1,0 +1,258 @@
+{
+    "SITE_METADATA": {
+        "model_ui": "model_site_metadata",
+        "model_data": {
+            "fr": {
+                "favicon_url": "https://itautomotive-dev.github.io/ucar-group-ui/ui/medias/favicon.png",
+                "theme_color": "#123456",
+                "author": "IT Automotive"
+            },
+            "en": {
+                "favicon_url": "https://itautomotive-dev.github.io/ucar-group-ui/ui/medias/favicon.png",
+                "theme_color": "#123456",
+                "author": "IT Automotive"
+            }
+        }
+    },
+    "HOMEPAGE_METADATA": {
+        "model_ui": "model_page_metadata",
+        "model_data": {
+            "fr": {
+                "title": "Accueil UCAR Corporate",
+                "description": "Réservez votre véhicule en quelques clics. Votre location de voiture ou de véhicule utilitaire à des prix accessibles. Réseau français d’agences de location de proximité en courte et longue durée.",
+                "image": "https://#fr"
+            },
+            "en": {
+                "title": "Homepage UCAR Corporate",
+                "description": "Book your votre véhicule en quelques clics. Votre location de voiture ou de véhicule utilitaire à des prix accessibles. Réseau français d’agences de location de proximité en courte et longue durée.",
+                "image": "https://#en"
+            }
+        }
+    },
+    "NOTRE_GROUPE_METADATA": {
+        "model_ui": "model_page_metadata",
+        "model_data": {
+            "fr": {
+                "title": "Notre Groupe",
+                "description": "Notre groupe description",
+                "image": "https://#fr"
+            },
+            "en": {
+                "title": "Our group",
+                "description": "Our group description",
+                "image": "https://#en"
+            }
+        }
+    },
+    "ACTU_2023_07_10_METADATA": {
+        "model_ui": "model_page_metadata",
+        "model_data": {
+            "fr": {
+                "title": "Notre actu du 10 juillet 2023",
+                "description": "Actu description",
+                "image": "https://#fr"
+            },
+            "en": {
+                "title": "What's new July 2023",
+                "description": "News description",
+                "image": "https://#en"
+            }
+        }
+    },
+    "ACTU_2023_07_19_METADATA": {
+        "model_ui": "model_page_metadata",
+        "model_data": {
+            "fr": {
+                "title": "Notre actu du 19 juillet 2023",
+                "description": "Actu description",
+                "image": "https://#fr"
+            },
+            "en": {
+                "title": "What's new on July 2023 the 19",
+                "description": "News description",
+                "image": "https://#en"
+            }
+        }
+    },
+    "ACTU_2023_07_21_METADATA": {
+        "model_ui": "model_page_metadata",
+        "model_data": {
+            "fr": {
+                "title": "Notre actu du 21 juillet 2023",
+                "description": "Actu description",
+                "image": "https://#fr"
+            },
+            "en": {
+                "title": "What's new on July 2023 the 21",
+                "description": "News description",
+                "image": "https://#en"
+            }
+        }
+    },
+    "NAV_PRIMARY": {
+        "model_ui": "model_nav_primary",
+        "model_data": {
+            "fr": {
+                "logo_url": "https://cdn.jsdelivr.net/gh/ita-design-system/ug-releases@main/ui/medias/logo-ucar-colors.svg",
+                "logo_alt": "Logo couleurs UCAR"
+            },
+            "en": {
+                "logo_url": "https://cdn.jsdelivr.net/gh/ita-design-system/ug-releases@main/ui/medias/logo-ucar-colors.svg",
+                "logo_alt": "UCAR color logo"
+            }
+        }
+    },
+    "CITATION_HOMEPAGE": {
+        "model_ui": "model_quote",
+        "model_data": {
+            "fr": {
+                "text": "Page d'accueil",
+                "author": "Olivier"
+            },
+            "en": {
+                "text": "Homepage",
+                "author": "Olivier"
+            }
+        }
+    },
+    "CITATION_GROUPE": {
+        "model_ui": "model_quote",
+        "model_data": {
+            "fr": {
+                "text": "Notre groupe",
+                "author": "Groupe UCAR"
+            },
+            "en": {
+                "text": "Our group",
+                "author": "UCAR Group"
+            }
+        }
+    },
+    "CARTES_FEATURES": {
+        "model_ui": "model_simple_icon_cards",
+        "model_data": {
+            "fr": {
+                "title": "Titre de la liste de cartes",
+                "cards": [
+                    {
+                        "title": "Carte 1",
+                        "description": "Description de la carte 1",
+                        "icon": "car_fill",
+                        "icon_color": "purple-500",
+                        "width_twelves": 4
+                    },
+                    {
+                        "title": "Carte 2",
+                        "description": "Description de la carte 2",
+                        "icon": "user_3_fill",
+                        "icon_color": "lime-500",
+                        "width_twelves": 8
+                    },
+                    {
+                        "title": "Carte 3",
+                        "description": "Description de la carte 3",
+                        "icon": "user_3_fill",
+                        "icon_color": "lime-500",
+                        "width_twelves": 12
+                    }
+                ]
+            },
+            "en": {
+                "title": "Cards list title",
+                "cards": [
+                    {
+                        "title": "Card 1",
+                        "description": "Card description 1",
+                        "icon": "car_fill",
+                        "icon_color": "purple-500",
+                        "width_twelves": 4
+                    },
+                    {
+                        "title": "Card 2",
+                        "description": "Card description 2",
+                        "icon": "user_3_fill",
+                        "icon_color": "lime-500",
+                        "width_twelves": 8
+                    },
+                    {
+                        "title": "Card 3",
+                        "description": "Card description 3",
+                        "icon": "user_3_fill",
+                        "icon_color": "lime-500",
+                        "width_twelves": 12
+                    }
+                ]
+            }
+        }
+    },
+    "ACTUALITES_2023_07_10": {
+        "model_ui": "model_news",
+        "model_data": {
+            "fr": {
+                "title": "Titre de l'actu!",
+                "description": "L’événement automobile à ne pas louper en cette fin d’année réouvre ses porte après deux ans de fermeture dû au COVID. La capitale française accueillera les acteurs majeur du secteur.",
+                "cover_url": "https://picsum.photos/id/161/1600/900",
+                "tags": ["premier", "second"],
+                "content": "<p class=\"c-txt m-fs-7 m-ff-lead-600\">Le Mondial de à l’Auto </p>"
+            },
+            "en": {
+                "title": "News title!",
+                "description": "The not-to-be-missed automotive event at the end of the year is reopening its doors after a two-year closure due to the COVID. The French capital will be welcoming all the major players in the sector.",
+                "cover_url": "https://picsum.photos/id/161/1600/900",
+                "tags": ["first", "second"],
+                "content": "<p class=\"c-txt m-fs-7 m-ff-lead-600\">Auto summit </p>"
+            }
+        }
+    },
+    "ACTUALITES_2023_07_19": {
+        "model_ui": "model_news",
+        "model_data": {
+            "fr": {
+                "title": "Actu Mercredi 19 juillet 2023",
+                "description": "L’événement automobile à ne pas louper en cette fin d’année réouvre ses porte après deux ans de fermeture dû au COVID. La capitale française accueillera les acteurs majeur du secteur.",
+                "cover_url": "https://picsum.photos/id/171/1600/900",
+                "tags": ["premier"],
+                "content": "<p class=\"c-txt m-fs-7 m-ff-lead-600\">Le de à l’Auto </p>"
+            },
+            "en": {
+                "title": "News on wednesday July 2023 the 19!",
+                "description": "The not-to-be-missed automotive event at the end of the year is reopening its doors after a two-year closure due to the COVID. The French capital will be welcoming all the major players in the sector.",
+                "cover_url": "https://picsum.photos/id/171/1600/900",
+                "tags": ["first"],
+                "content": "<p class=\"c-txt m-fs-7 m-ff-lead-600\">Auto summit 2 </p>"
+            }
+        }
+    },
+    "ACTUALITES_2023_07_21": {
+        "model_ui": "model_news",
+        "model_data": {
+            "fr": {
+                "title": "Actu Vendredi 21 juillet 2023",
+                "description": "L’événement automobile à ne pas louper en cette fin d’année réouvre ses porte après deux ans de fermeture dû au COVID. La capitale française accueillera les acteurs majeur du secteur.",
+                "cover_url": "https://picsum.photos/id/172/1600/900",
+                "tags": ["premier"],
+                "content": "<p class=\"c-txt m-fs-7 m-ff-lead-600\">Le de à l’Auto </p>"
+            },
+            "en": {
+                "title": "News on friday July 2023 the 21!",
+                "description": "The not-to-be-missed automotive event at the end of the year is reopening its doors after a two-year closure due to the COVID. The French capital will be welcoming all the major players in the sector.",
+                "cover_url": "https://picsum.photos/id/172/1600/900",
+                "tags": ["first"],
+                "content": "<p class=\"c-txt m-fs-7 m-ff-lead-600\">Auto summit 2 </p>"
+            }
+        }
+    },
+    "NEWS_SCROLLER": {
+        "model_ui": "model_news_scroller",
+        "model_data": {
+            "fr": {
+                "title": "Nos dernières actus",
+                "description": "L’événement automobile à ne pas louper en cette fin d’année."
+            },
+            "en": {
+                "title": "Latest news",
+                "description": "The not-to-be-missed automotive event"
+            }
+        }
+    }
+}

@@ -1,0 +1,82 @@
+---
+pagination:
+    data: cms_pages
+    size: 1
+    alias: cms_page
+permalink: "{{ cms_page.language }}/{{ cms_links[cms_page.reference][cms_page.language] }}/index.html"
+---
+<!doctype html>
+<html lang="{{ cms_page.language }}">
+<head>
+    <!-- COMMON METADATA -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-starturl" content="{{ page.url }}">
+    <meta property="og:url" content="{{ page.url }}">
+    <meta name="twitter:url" content="{{ page.url }}">
+
+    {% for model_id in cms_page.stack %}
+        {% if cms_sections[model_id].model_ui == 'model_page_metadata' or cms_sections[model_id].model_ui == 'model_site_metadata' %}
+            {% assign tpl = cms_sections[model_id].model_ui | append: ".liquid" %}
+            {%-     render '{{ tpl }}',
+                    cms_model: cms_sections[model_id].model_data,
+                    cms_site: cms_site,
+                    cms_page: cms_page,
+                    cms_links: cms_links,
+                    env: env,
+                    envlocal: envlocal
+            -%}
+        {% endif  %}
+    {% endfor %}
+
+    <style>
+        /* retrait style <details> par défaut de iOS */
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        /* retrait style <button> et <select> par défaut de iOS */
+        select, button {
+            color: black
+        }
+    </style>
+    {% assign current_env_ui_root_url = envlocal.ui_root_url | default: env.ui_root_url %}
+    <link rel="stylesheet" href="{{ current_env_ui_root_url }}/css/briks_css_variables.css">
+    <link rel="stylesheet" href="{{ current_env_ui_root_url }}/css/briks_fonts.css">
+    <link rel="stylesheet" href="{{ current_env_ui_root_url }}/css/briks_keyframes.css">
+    <link rel="stylesheet" href="{{ current_env_ui_root_url }}/css/briks_dis_generic.css">
+    <link rel="stylesheet" href="{{ current_env_ui_root_url }}/css/briks_dis_extension.css">
+    <link rel="stylesheet" href="{{ current_env_ui_root_url }}/css/briks_dim_generic.css">
+    <link rel="stylesheet" href="{{ current_env_ui_root_url }}/css/briks_dim_extension.css">
+    <link rel="stylesheet" href="{{ current_env_ui_root_url }}/css/briks_pos_generic.css">
+    <link rel="stylesheet" href="{{ current_env_ui_root_url }}/css/briks_pos_extension.css">
+    <link rel="stylesheet" href="{{ current_env_ui_root_url }}/css/briks_txt_generic.css">
+    <link rel="stylesheet" href="{{ current_env_ui_root_url }}/css/briks_txt_extension.css">
+    <link rel="stylesheet" href="{{ current_env_ui_root_url }}/css/briks_skin_generic.css">
+    <link rel="stylesheet" href="{{ current_env_ui_root_url }}/css/briks_skin_extension.css">
+    <link rel="stylesheet" href="{{ current_env_ui_root_url }}/css/briks_utilities_generic.css">
+    <link rel="stylesheet" href="{{ current_env_ui_root_url }}/css/briks_html.css">
+    <link rel="stylesheet" href="{{ current_env_ui_root_url }}/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="{{ current_env_ui_root_url }}/css/wysiwyg-group.css">
+    <link rel="stylesheet" href="{{ current_env_ui_root_url }}/css/lite-yt-embed.css">
+
+</head>
+
+<body>
+    {% for model_id in cms_page.stack -%}
+        {%- if cms_sections[model_id].model_ui != 'model_page_metadata' and cms_sections[model_id].model_ui != 'model_site_metadata' -%}
+            {%- assign tpl = cms_sections[model_id].model_ui | append: ".liquid" -%}
+            {%-     render '{{ tpl }}',
+                    cms_model: cms_sections[model_id].model_data,
+                    cms_site: cms_site,
+                    cms_sections: cms_sections,
+                    cms_pages: cms_pages,
+                    cms_page: cms_page,
+                    cms_links: cms_links,
+                    env: env,
+                    envlocal: envlocal
+            -%}
+        {%- endif -%}
+    {%- endfor %}
+</body>
+
+</html>

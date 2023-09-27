@@ -1,0 +1,22 @@
+{
+    "HOMEPAGE": {
+        "fr": "accueil",
+        "en": "home"
+    },
+    "NOTRE_GROUPE": {
+        "fr": "notre-groupe",
+        "en": "our-group"
+    },
+    "ACTU_2023_07_10": {
+        "fr": "actualites/2023-07-10",
+        "en": "news/2023-07-10"
+    },
+    "ACTU_2023_07_19": {
+        "fr": "actualites/2023-07-19",
+        "en": "news/2023-07-19"
+    },
+    "ACTU_2023_07_21": {
+        "fr": "actualites/2023-07-21",
+        "en": "news/2023-07-21"
+    }
+}

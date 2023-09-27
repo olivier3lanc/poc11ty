@@ -1,0 +1,67 @@
+<section class="
+    c-dim m-pt-5
+    c-skin m-bc-grey-light-200">
+    <div class="
+        c-dim
+        c-skin m-bsize-cover m-brep-no-repeat m-bpos-center"
+        u-d-none="xs,sm"
+        style="height:450px; background-image: url('{{ cms_model[cms_page.language].cover_url }}')"></div>
+    <div class="
+        c-dim
+        c-skin m-bsize-cover m-brep-no-repeat m-bpos-center"
+        u-d-none="md,lg"
+        style="height:300px; background-image: url('{{ cms_model[cms_page.language].cover_url }}')"></div>
+    <article class="
+        c-dim m-w-100 m-maxw-3 m-m-auto
+        c-pos m-relative"
+        m-pl-10="md,lg"
+        m-pr-10="md,lg"
+        style="top: -100px">
+        <header class="
+            c-dim m-p-9
+            c-skin m-bc-grey-light-100"
+            m-w-8t="md,lg"
+            m-pl-5="xs,sm"
+            m-pr-5="xs,sm"
+            m-pt-7="xs,sm"
+            m-pb-7="xs,sm">
+            <ul class="
+                c-dis m-flex m-gap-5 m-cross-baseline
+                c-dim m-p-0 m-m-0
+                c-skin m-ls-none">
+                {% for tag in cms_model[cms_page.language].tags %}
+                    <li class="c-dis m-flex m-gap-5 m-cross-baseline">
+                        <span class="
+                            c-dim m-pt-1 m-pr-2 m-pb-1 m-pl-2
+                            c-txt m-ff-lead-400 m-fs-2
+                            c-skin m-bc-purple-300 m-brad-1">
+                            {{ tag }}
+                        </span>
+                    </li>
+                {% endfor %}
+                <li class="
+                    c-txt m-ff-lead-400 m-fs-3
+                    c-skin m-c-grey-dark-300">
+                    date
+                </li>
+            </ul> 
+            <h1 class="c-txt m-ff-lead-600 m-fs-10
+            c-dim m-m-0 m-mt-4 m-mb-6" m-fs-9="xs,sm">
+                {{ cms_model[cms_page.language].title }}
+            </h1>
+            <div class="wysiwyg-group
+                c-txt m-ff-lead-500 m-fs-6
+                c-skin m-c-grey-dark-900"
+                m-pr-8="md,lg"
+                m-fs-5="xs,sm">
+                {{ cms_model[cms_page.language].description }}
+            </div>
+        </header>
+        <div class="wysiwyg-group
+            c-dim m-maxw-8 m-pl-6 m-pr-6 m-m-auto m-mt-10
+            c-skin m-c-grey-dark-300"
+            m-mt-7="xs,sm">
+            {{ cms_model[cms_page.language].content | raw }}
+        </div>
+    </article>
+</section>

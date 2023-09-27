@@ -1,0 +1,18 @@
+{
+  "name": "11ty",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "eleventy --serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "dependencies": {
+    "@11ty/eleventy-fetch": "^4.0.0"
+  }
+}

@@ -1,0 +1,163 @@
+<section class="
+    c-dis m-flex
+    c-pos m-relative
+    c-dim m-o-hidden m-pb-11 m-mt-11
+    c-skin m-bc-grey-light-100"
+    m-column="xs,sm,md"
+    m-mt-8="xs,sm,md"
+    m-pb-8="xs,sm,md">
+    <header class="c-dim"
+        m-w-5t="lg">
+        <div class="c-pos c-dim"
+            m-pl-10="lg"
+            m-pl-5="xs,sm,md"
+            m-pr-5="xs,sm,md"
+            m-absolute="lg"
+            m-top-0="lg" 
+            m-left-50-minus-600px="lg">
+            <h2 class="
+                c-dim m-mt-6 m-mb-6
+                c-txt m-fs-10 m-ff-lead-600"
+                m-fs-9="xs,sm,md"
+                m-mb-3="xs,sm,md">
+                {{ cms_model[cms_page.language].title }}
+            </h2>
+            <p class="
+                c-dim m-m-0
+                c-txt m-fs-4
+                c-skin m-c-grey-dark-300">
+                {{ cms_model[cms_page.language].description }}
+            </p>
+    
+            <nav class="
+                c-dis m-flex m-column m-cross-start
+                c-dim m-mt-2">
+                <a href="#" class="
+                    c-dim
+                    c-txt m-ff-lead-500 m-fs-4 m-ws-nowrap
+                    c-skin m-color-scheme-3"
+                    m-mb-8="lg">
+                    Lien
+                </a>
+                <div class="c-dis m-flex"
+                    m-none="xs,sm,md">
+                    <button id="ucar_news_previous"
+                        class="
+                        c-pos m-relative
+                        c-dim m-p-5 m-mr-3
+                        c-txt m-fs-6 m-ta-center
+                        c-skin m-color-scheme-5 m-cur-pointer m-brad-9 m-transition-1"
+                        role="navigation"
+                        aria-command="previous"
+                        disabled>
+                        <span class="
+                            icon-arrow_left_line
+                            c-pos m-absolute m-top-50 m-left-50 m-offset-50-50">
+                        </span>
+                    </button>
+                    <button id="ucar_news_next"
+                        class="
+                        c-pos m-relative
+                        c-dim m-p-5
+                        c-txt m-fs-6 m-ta-center
+                        c-skin m-color-scheme-5 m-cur-pointer m-brad-9 m-transition-1"
+                        role="navigation"
+                        aria-command="next">
+                        <span class="
+                            icon-arrow_right_line
+                            c-pos m-absolute m-top-50 m-left-50 m-offset-50-50">
+                        </span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    
+    <ul id="ucar_news"
+        class="
+        c-dis m-flex m-gap-5
+        c-dim m-w-7t m-o-auto m-p-0 m-pb-8 m-m-0 m-scrollb-smooth m-scrollst-x-mandatory
+        c-skin m-ls-none m-brad-4"
+        m-w-12t="xs,sm,md"
+        m-mt-8="xs,sm,md"
+        m-pl-7="xs,sm,md"
+        m-pb-7="xs,sm,md">
+        
+        {% for section in cms_sections %}
+            {% if cms_sections[section[0]].model_ui == 'model_news' %}
+                <li class="
+                    c-dis m-flex m-column
+                    c-pos m-relative
+                    c-dim m-maxw-2 m-minw-2 m-o-hidden m-scrollsa-start
+                    c-skin m-bc-grey-light-300 m-brad-5"
+                    {% if forloop.first %}
+                        c-scrollspy="scroller" 
+                        data-target-id="ucar_news_previous"
+                    {% endif %}
+                    {% if forloop.last %}
+                        c-scrollspy="scroller" 
+                        data-target-id="ucar_news_next"
+                    {% endif %}>
+                    <img alt="{{ cms_sections[section[0]].model_data[cms_page.language].title }}"
+                        src="https://wsrv.nl/?url={{ cms_sections[section[0]].model_data[cms_page.language].cover_url }}&w=300&h=200&output=webp&q=30&fit=cover" 
+                        srcset="
+                            https://wsrv.nl/?url={{ cms_sections[section[0]].model_data[cms_page.language].cover_url }}&w=300&h=200&output=webp&q=50&fit=cover&dpr=1 1x,
+                            https://wsrv.nl/?url={{ cms_sections[section[0]].model_data[cms_page.language].cover_url }}&w=300&h=200&output=webp&q=50&fit=cover&dpr=2 2x,
+                            https://wsrv.nl/?url={{ cms_sections[section[0]].model_data[cms_page.language].cover_url }}&w=300&h=200&output=webp&q=50&fit=cover&dpr=3 3x"
+                        decoding="async"
+                        loading="lazy"
+                        class="c-dim m-w-100" 
+                        onerror="console.log('Source invalide '+this.src)"
+                        style="aspect-ratio: 3/2;">
+                    <div class="
+                        c-dis m-flex m-column m-main-space-between
+                        c-dim m-grow m-w-100 m-pt-4 m-pr-5 m-pb-6 m-pl-5">
+                        <div class="
+                            c-dis m-flex m-column m-cross-start
+                            c-dim m-w-100 m-mb-8">
+                            <ul class="
+                                c-dis m-flex m-gap-3
+                                c-dim m-p-0 m-mt-0 m-mb-3
+                                c-skin m-ls-none">
+                                {% for tag in cms_sections[section[0]].model_data[cms_page.language].tags %}
+                                    <li class="
+                                        c-dim m-pt-1 m-pr-2 m-pb-1 m-pl-2
+                                        c-txt m-fs-2
+                                        c-skin m-bc-lime-300 m-brad-1">
+                                        {{ tag }}
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                            {% assign current_news_url = '#' %}
+                            {% for page in cms_pages %}
+                                {% for section_id in page.stack %}
+                                    {% if section_id == section[0] %}
+                                        {% assign current_news_url = cms_links[page.reference][cms_page.language] %}
+                                    {% endif %}
+                                {% endfor %}
+                            {% endfor %}
+                            <a  href="{{ envlocal.url | default: env.url }}{{ envlocal.baseurl | default: env.baseurl }}/{{ cms_page.language }}/{{ current_news_url }}"
+                                class="
+                                c-dis m-webkit-box
+                                c-dim m-m-0 m-w-100 m-o-hidden
+                                c-txt m-ff-lead-600 m-fs-5 m-ellipsis-3 m-td-none
+                                c-skin m-c-grey-dark-900">
+                                {{ cms_sections[section[0]].model_data[cms_page.language].title }}
+                                <span class="
+                                    c-dis m-flex
+                                    c-pos m-absolute m-top-0 m-left-0
+                                    c-dim m-w-100 m-h-100"></span>
+                            </a>
+                        </div>
+                        <div class="
+                            c-txt m-fs-3
+                            c-skin m-c-grey-dark-300">
+                            date
+                        </div>
+                    </div>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</section>

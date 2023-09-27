@@ -1,0 +1,106 @@
+[
+    {
+        "language": "fr",
+        "reference": "HOMEPAGE",
+        "stack": [
+            "SITE_METADATA",
+            "HOMEPAGE_METADATA",
+            "NAV_PRIMARY",
+            "CITATION_HOMEPAGE",
+            "NEWS_SCROLLER",
+            "CARTES_FEATURES"
+        ]
+    },
+    {
+        "language": "en",
+        "reference": "HOMEPAGE",
+        "stack": [
+            "SITE_METADATA",
+            "HOMEPAGE_METADATA",
+            "NAV_PRIMARY",
+            "CITATION_HOMEPAGE",
+            "NEWS_SCROLLER",
+            "CARTES_FEATURES"
+        ]
+    },
+    {
+        "language": "fr",
+        "reference": "NOTRE_GROUPE",
+        "stack": [
+            "SITE_METADATA",
+            "NOTRE_GROUPE_METADATA",
+            "NAV_PRIMARY",
+            "CITATION_GROUPE"
+        ]
+    },
+    {
+        "language": "en",
+        "reference": "NOTRE_GROUPE",
+        "stack": [
+            "SITE_METADATA",
+            "NOTRE_GROUPE_METADATA",
+            "NAV_PRIMARY",
+            "CITATION_GROUPE"
+        ]
+    },
+    {
+        "language": "fr",
+        "reference": "ACTU_2023_07_10",
+        "stack": [
+            "SITE_METADATA",
+            "ACTU_2023_07_10_METADATA",
+            "NAV_PRIMARY",
+            "ACTUALITES_2023_07_10"
+        ]
+    },
+    {
+        "language": "en",
+        "reference": "ACTU_2023_07_10",
+        "stack": [
+            "SITE_METADATA",
+            "ACTU_2023_07_10_METADATA",
+            "NAV_PRIMARY",
+            "ACTUALITES_2023_07_10"
+        ]
+    },
+    {
+        "language": "fr",
+        "reference": "ACTU_2023_07_19",
+        "stack": [
+            "SITE_METADATA",
+            "ACTU_2023_07_19_METADATA",
+            "NAV_PRIMARY",
+            "ACTUALITES_2023_07_19"
+        ]
+    },
+    {
+        "language": "en",
+        "reference": "ACTU_2023_07_19",
+        "stack": [
+            "SITE_METADATA",
+            "ACTU_2023_07_19_METADATA",
+            "NAV_PRIMARY",
+            "ACTUALITES_2023_07_19"
+        ]
+    },
+    {
+        "language": "fr",
+        "reference": "ACTU_2023_07_21",
+        "stack": [
+            "SITE_METADATA",
+            "ACTU_2023_07_21_METADATA",
+            "NAV_PRIMARY",
+            "ACTUALITES_2023_07_21"
+        ]
+    },
+    {
+        "language": "en",
+        "reference": "ACTU_2023_07_21",
+        "stack": [
+            "SITE_METADATA",
+            "ACTU_2023_07_21_METADATA",
+            "NAV_PRIMARY",
+            "ACTUALITES_2023_07_21"
+        ]
+    }
+]
