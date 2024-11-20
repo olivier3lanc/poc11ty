@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="{{ cms_page.language }}">
+<head>
+    <!-- COMMON METADATA -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des stores</title>
+</head>
+
+<body>
+    <h1>Liste des stores</h1>
+    <p>{{ site.imgsrv }}</p>
+    <ul>
+    {% for store in stores %}
+        <li><a href="./{{ store.url }}/">{{ store.webName }}</a></li>
+    {% endfor %}
+    </ul>
+</body>
+
+</html>
