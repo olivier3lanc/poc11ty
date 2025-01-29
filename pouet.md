@@ -1,6 +1,6 @@
 ---
 title: Coucou
-layout: simple_page.liquid
+layout: sandbox.liquid
 tags: first
 ---
 # coucou

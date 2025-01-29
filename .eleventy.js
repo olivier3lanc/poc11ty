@@ -52,7 +52,7 @@ module.exports = function(eleventyConfig) {
             return aRet.join('');
         }
         const contentNew = HTMLEncode(content);
-        return `<pre><code>${contentNew}</code></pre><iframe style="width:100%; height:500px" srcdoc="${contentNew}"></iframe>`;
+        return `<pre><code class="language-html">${contentNew}</code></pre><iframe style="width:100%; height:500px" srcdoc="${contentNew}"></iframe>`;
     });
 
 };

@@ -1,0 +1,24 @@
+---
+permalink: bundles/search_index.json
+eleventyExcludeFromCollections: true
+---
+[
+    {% if stores.size > 0 %}
+        {% for store in stores %}
+            {
+                "url": "/{{ store.url }}/",
+                "title": "{{ store.webName }}",
+                "content": "{{ store.webName | strip_newlines | strip_html }} {{ store.address.street | strip_newlines | strip_html }} {{ store.address.city | strip_newlines | strip_html }}{{ store.address.zipcode | strip_newlines | strip_html }}"
+            },
+        {% endfor %}
+    {% endif %}
+    {% if collections.all.size > 0 %}
+        {% for post in collections.all %}
+            {
+                "url": "{{ post.url }}",
+                "title": "{{ post.data.title }}",
+                "content": "{{ post.content | strip_newlines | strip_html }}"
+            }{% if forloop.last == false %},{% endif %}
+        {% endfor %}
+    {% endif %}
+]
