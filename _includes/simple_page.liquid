@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bundles/bundle.css">
+<title>{{ title }}{% if pagination.pageNumber > 0 %} - Page {{ pagination.pageNumber|plus:1 }}{% endif %}</title>
+</head>
+<body>
+    <menu>
+        {%- for post in collections.all -%}
+            <li><a href="{{ post.url }}">{{ post.data.title }} {{ post.url }}</a></li>
+        {%- endfor -%}
+    </menu>
+    {{ content }}
+    <script src="/bundles/bundle.js"></script>
+</body>
+</html>
